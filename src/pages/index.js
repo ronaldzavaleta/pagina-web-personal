@@ -1,28 +1,27 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+import Layout from "../components/Layout";
+import AboutMe from "../components/AboutMe";
+import Head from "next/head";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export default function Home() {
   return (
-    <div>
-      <div>
-        <img href="/avatar.png"></img>
-        <div>
-          <h1>Ronald Zavaleta</h1>
-          <p>Estudiante de alto rendimiento academico con un gran interes por nuevos conocimientos.</p>
-        </div>
-        
+      <div className="w-full flex justify-center">
+          <Head>
+              <title>Ronald Zavaleta</title>
+              <meta name="description" content="Pagina de presentacion de Ronald Zavaleta" />
+
+              <meta property="og:title" content="Mi Portafolio" />
+              <meta property="og:description" content="Pagina de presentacion de de Ronald Zavaleta" />
+              <meta property="og:image" content="/images/preview.png" />
+              <meta property="og:image:alt" content="Vista previa de la página" />
+
+              <meta property="og:image" content="/images/avatar.jpg" />
+          </Head>
+
+          <div className="max-w-[900px] flex flex-col space-y-5">
+              <Layout />
+              <AboutMe />
+          </div>
       </div>
-    
-    </div>
   );
 }
