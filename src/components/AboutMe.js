@@ -29,6 +29,19 @@ const AboutMe = () => {
             imageCover: false,
             imageBackground: "#ffffff",
         },
+        {
+            title: "Ajedrez",
+            text: (
+                <>
+                    Me gusta jugar al ajedrez y asi mismo he particiado en algunos torneos locales. Ya que me encanta este
+                    deporte, porque considero que me ayuda a tener una mente mas agil y aprender a regular mi tiempo en momentos
+                    de estres y alta presion.
+                </>
+            ),
+            image: "/images/album/ajedrez_torneo.jpg",
+            imageCover: false,
+            imageBackground: "#ffffff",
+        },
     ];
 
     return (

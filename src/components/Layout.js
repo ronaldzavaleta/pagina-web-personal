@@ -27,7 +27,7 @@ const Layout = () => {
             <div className="flex-1">
                 <h1 className="font-bold text-[25px]">Ronald Zavaleta</h1>
                 <p className="text-gray-300 mt-2 text-[17px]">
-                    Hola! Soy Ronald, un desarrollador web que busca la excelencia en cada
+                    Hola! Soy Ronald, un desarrollador de Lima, Peru, que busca la excelencia en cada
                     proyecto. Buscando adquirir conocimientos nuevos cada día.
                 </p>
 

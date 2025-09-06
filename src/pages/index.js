@@ -18,7 +18,7 @@ export default function Home() {
               <meta property="og:image" content="/images/avatar.jpg" />
           </Head>
 
-          <div className="max-w-[900px] flex flex-col space-y-5">
+          <div className="max-w-[950px] flex flex-col space-y-5">
               <Layout />
               <AboutMe />
           </div>
