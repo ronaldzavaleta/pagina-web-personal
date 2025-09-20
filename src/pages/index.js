@@ -1,5 +1,6 @@
 import Layout from "../components/Layout";
 import AboutMe from "../components/AboutMe";
+import Footer from "../components/Footer";
 import Head from "next/head";
 
 
@@ -21,6 +22,7 @@ export default function Home() {
           <div className="max-w-[950px] flex flex-col space-y-5">
               <Layout />
               <AboutMe />
+              <Footer />
           </div>
       </div>
   );
