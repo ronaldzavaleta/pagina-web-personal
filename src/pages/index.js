@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import AboutMe from "../components/AboutMe";
 import Head from "next/head";
+import University from "@/components/University";
 
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
           <div className="max-w-[950px] flex flex-col space-y-5">
               <Layout />
               <AboutMe />
+              <University />
           </div>
       </div>
   );
