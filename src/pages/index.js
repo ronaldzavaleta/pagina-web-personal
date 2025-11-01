@@ -1,6 +1,5 @@
 import Layout from "../components/Layout";
 import AboutMe from "../components/AboutMe";
-import University from "../components/University";
 import Head from "next/head";
 
 
@@ -22,7 +21,6 @@ export default function Home() {
           <div className="max-w-[950px] flex flex-col space-y-5">
               <Layout />
               <AboutMe />
-              <University />
           </div>
       </div>
   );
