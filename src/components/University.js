@@ -1,31 +1,28 @@
 import React from "react";
 
-const AboutMe = () => {
+const University = () => {
     const entries = [
         {
-            title: "Pasión por la Programación",
+            title: "Laboratorio de Quimica",
             text: (
                 <>
-                    Desde los 14 años descubrí mi pasión por el mundo de la programación.
-                    Lo que empezó como una simple curiosidad se ha convertido en la carrera que
-                    disfruto cada día, siempre buscando aprender nuevas tecnologías y resolver
-                    problemas complejos a través del código.
+                    Hemos realizado actividades de laboratorio de quimica, experimentando con diferentes sustancias
+                    viendo sus reacciones, y aprendiendo a usar las herramientas de laboratorio.
                 </>
             ),
-            image: "/images/album/programacion.jpg", // Puedes cambiar esta imagen por una más personal
-            imageCover: true,
-            imageBackground: "#1a202c",
+            image: "/images/album/quimica_lab.jpg",
+            imageCover: false,
+            imageBackground: "#ffffff",
         },
         {
-            title: "Ajedrez",
+            title: "Actividad de Informatica",
             text: (
                 <>
-                    Me gusta jugar al ajedrez y asi mismo he particiado en algunos torneos locales. Ya que me encanta este
-                    deporte, porque considero que me ayuda a tener una mente mas agil y aprender a regular mi tiempo en momentos
-                    de estres y alta presion.
+                    Tuvimos un reto los primeros semestres de la carrera, donde debiamos realizar la construccion de una
+                    ciudad, organizandonos con la metodologia Scrum.
                 </>
             ),
-            image: "/images/album/ajedrez_torneo.jpg",
+            image: "/images/album/info_ciudad.jpg",
             imageCover: false,
             imageBackground: "#ffffff",
         },
@@ -34,7 +31,7 @@ const AboutMe = () => {
     return (
         <div className="w-full space-y-[40px] p-6 rounded-2xl shadow-md bg-white/5">
             <div className="w-full flex justify-center">
-                <h1 className="font-bold text-[25px]">Sobre Mi</h1>
+                <h1 className="font-bold text-[25px]">Mi Universidad</h1>
             </div>
 
             <div className="w-full flex flex-col flex-1 space-y-12">
@@ -82,4 +79,4 @@ const AboutMe = () => {
     );
 };
 
-export default AboutMe;
+export default University;
