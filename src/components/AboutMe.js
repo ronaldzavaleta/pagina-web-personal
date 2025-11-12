@@ -32,10 +32,8 @@ const AboutMe = () => {
     ];
 
     return (
-        <div className="w-full space-y-[40px] p-6 rounded-2xl shadow-md bg-white/5">
-            <div className="w-full flex justify-center">
-                <h1 className="font-bold text-[25px]">Sobre Mi</h1>
-            </div>
+        <section className="space-y-3">
+            <h3 className="text-xl font-semibold">Sobre mí</h3>
 
             <div className="w-full flex flex-col flex-1 space-y-12">
                 {entries.map((entrie, index) => {
@@ -78,7 +76,7 @@ const AboutMe = () => {
                     );
                 })}
             </div>
-        </div>
+        </section>
     );
 };
 

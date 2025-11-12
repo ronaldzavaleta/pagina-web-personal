@@ -78,5 +78,4 @@ const University = () => {
         </div>
     );
 };
-
 export default University;
