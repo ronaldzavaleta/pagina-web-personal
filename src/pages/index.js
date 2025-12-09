@@ -1,108 +1,84 @@
-import AboutMe from "../components/AboutMe";
 import Head from "next/head";
-import University from "@/components/University";
+import Carousel from '../components/Carousel';
+
+const profileData = [
+    {
+        title: "Pasión por la Programación",
+        text: "Desde los 14 años descubrí mi pasión por el mundo de la programación. Lo que empezó como una simple curiosidad se ha convertido en la carrera que disfruto cada día.",
+        image: "/images/album/programacion.jpg",
+    },
+    {
+        title: "Ajedrez",
+        text: "Me gusta jugar al ajedrez y he participado en algunos torneos locales. Considero que me ayuda a tener una mente más ágil y a regular mi tiempo en momentos de estrés.",
+        image: "/images/album/ajedrez_torneo.jpg",
+    },
+    {
+        title: "Laboratorio de Química",
+        text: "Hemos realizado actividades de laboratorio de química, experimentando con diferentes sustancias y aprendiendo a usar las herramientas de laboratorio.",
+        image: "/images/album/quimica_lab.jpg",
+    },
+    {
+        title: "Actividad de Informática",
+        text: "Tuvimos un reto en los primeros semestres donde debíamos construir una ciudad, organizándonos con la metodología Scrum.",
+        image: "/images/album/info_ciudad.jpg",
+    },
+];
+
+const skills = ["JavaScript", "Python", "Java", "SQL"];
 
 export default function Home() {
-  return (
-    <main className="min-h-screen bg-[#070708] text-gray-100 antialiased flex justify-center">
-      <Head>
-        <title>Ronald Zavaleta — Portafolio</title>
-        <meta
-          name="description"
-          content="Portafolio de Ronald Zavaleta"
-        />
-
-        <meta property="og:title" content="Ronald Zavaleta — Portafolio" />
-        <meta
-          property="og:description"
-          content="Portafolio de Ronald Zavaleta"
-        />
-        <meta property="og:image" content="/images/preview.png" />
-        <meta property="og:image:alt" content="Vista previa de la página" />
-      </Head>
-
-      <div className="max-w-[980px] w-full px-6 py-12">
-        <header className="flex items-center justify-between mb-10">
-          <div>
-            <h1 className="text-2xl font-semibold tracking-tight">Ronald Zavaleta</h1>
-            <p className="text-sm text-gray-400">Software Developer</p>
-          </div>
-
-          <nav className="hidden sm:flex space-x-4">
-            <a href="#about" className="text-sm text-gray-300 hover:text-white transition">
-              Sobre mí
-            </a>
-            <a href="#university" className="text-sm text-gray-300 hover:text-white transition">
-              Educación
-            </a>
-            <a href="/contact" className="text-sm text-gray-300 hover:text-white transition">
-              Contacto
-            </a>
-          </nav>
-        </header>
-
-        <section className="mb-12">
-          {/* Hero: imagen a la izquierda, contenido a la derecha (responsive) */}
-          <div className="md:flex gap-8 rounded-2xl bg-gradient-to-b from-[#0f0f10] to-[#0b0b0c] border border-gray-800 p-6 md:p-10 shadow-[0_8px_30px_rgba(2,6,23,0.6)] items-center">
-            {/* Imagen */}
-            <div className="flex items-center justify-center">
-              <div className="w-74 h-74 rounded-xl overflow-hidden border border-white/6 bg-gradient-to-br from-transparent to-white/2">
-                <img
-                  src="/images/avatar.jpg"
-                  alt="Avatar — Ronald Zavaleta"
-                  className="w-full h-full object-cover block"
+    return (
+        <main className="relative min-h-screen bg-[#070708] text-gray-100 antialiased flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 overflow-hidden">
+            <Head>
+                <title>Ronald Zavaleta — Portafolio</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta
+                    name="description"
+                    content="Portafolio de Ronald Zavaleta"
                 />
-              </div>
+                <meta name="robots" content="noindex" />
+                <meta property="og:title" content="Ronald Zavaleta — Portafolio" />
+                <meta
+                    property="og:description"
+                    content="Portafolio de Ronald Zavaleta"
+                />
+                <meta property="og:image" content="/images/preview.png" />
+                <meta property="og:image:alt" content="Vista previa de la página" />
+            </Head>
+
+            <div className="absolute top-0 left-0 w-full h-full z-0">
+                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full filter blur-3xl opacity-50 animate-pulse"></div>
+                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full filter blur-3xl opacity-50 animate-pulse animation-delay-4000"></div>
             </div>
 
-            {/* Contenido */}
-            <div className="flex flex-col justify-center space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Hola, soy Ronald.</h2>
-              <p className="text-lg text-gray-400 max-w-xl leading-relaxed">
-                  Hola! Soy Ronald, un desarrollador de Lima, Peru, que busca la excelencia en cada
-                    proyecto. Buscando adquirir conocimientos nuevos cada día.
-              </p>
+            <div className="relative z-10 md:bg-white/5 md:p-10 md:rounded-4xl md:border-1 border-amber-50/10 flex flex-col md:flex-row items-start gap-8 md:gap-12 max-w-6xl w-full">
 
-              <div className="flex flex-wrap gap-3">
-                <a
-                  href="#about"
-                  className="inline-flex items-center justify-center bg-gradient-to-r from-purple-500 to-pink-500 text-black px-5 py-2 rounded-full font-medium shadow-sm hover:scale-[1.02] transition-transform"
-                >
-                  Ver más
-                </a>
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center border border-gray-700 px-5 py-2 rounded-full text-gray-300 hover:text-white transition"
-                >
-                  Contacto
-                </a>
-              </div>
+                <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
+                    <img
+                        src="/images/avatar.jpg"
+                        alt="Avatar — Ronald Zavaleta"
+                        className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover mb-4 border-4 border-purple-500 shadow-lg"
+                    />
+                    <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Ronald Zavaleta</h1>
+                    <p className="text-lg md:text-xl text-gray-400 mt-1">Software Developer</p>
 
-              <div className="pt-4 border-t border-white/6 flex flex-wrap gap-3 text-sm text-gray-400">
-                <span className="px-3 py-1 bg-white/3 rounded-full">UI / UX</span>
-                <span className="px-3 py-1 bg-white/3 rounded-full">Frontend</span>
-                <span className="px-3 py-1 bg-white/3 rounded-full">React / Next.js</span>
-              </div>
+                    <div className="mt-4 mb-6 flex flex-wrap gap-2 justify-center md:justify-start">
+                        {skills.map((skill) => (
+                            <span key={skill} className="px-3 py-1 bg-white/10 rounded-full text-sm">{skill}</span>
+                        ))}
+                    </div>
+
+                    <p className="text-base text-gray-300 leading-relaxed">
+                        Hola! Soy Ronald Zavaleta, un estudiante de Ingenieria Informatica en la UPCH. Desde bastante joven
+                        me gusto mucho el mundo de la programación, razon por la cual estudio esta carrera.
+                    </p>
+                </div>
+
+                <div className="w-full md:w-1/2 flex items-center justify-center">
+                    <Carousel items={profileData} />
+                </div>
+
             </div>
-          </div>
-        </section>
-
-        <section id="about" className="space-y-6 mb-8">
-          <div className="rounded-xl bg-[#0f0f10] border border-gray-800 p-6 shadow-sm">
-            <AboutMe />
-          </div>
-        </section>
-
-        <section id="university">
-          <div className="rounded-xl bg-[#0f0f10] border border-gray-800 p-6 shadow-sm">
-            <University />
-          </div>
-        </section>
-
-        <footer className="mt-10 text-center text-sm text-gray-500">
-          © {new Date().getFullYear()} Ronald Zavaleta. Proyecto personal para la UPCH
-        </footer>
-      </div>
-    </main>
-  );
+        </main>
+    );
 }
